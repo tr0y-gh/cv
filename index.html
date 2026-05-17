@@ -10,13 +10,17 @@
 </head>
 <body>
   <div id="page-wrapper">
-    <header id="page-header">
+    <header id="print-header" class="print">
+      <div class="container">
+        <p></p>
+      </div>
+    </header>
+    <header id="page-header" class="no-print">
       <a href="#main" id="skip-link">Skip to content</a>
       <div class="container">
         <nav class="flex">
           <ul class="nav unstyled flex flex-1">
             <li><a href="/">CV</a></li>
-            <li><a href="/styleguide">Styleguide</a></li>
           </ul>
           <ul class="unstyled flex">
             <li>
@@ -24,10 +28,15 @@
                 <option value="light">Light</option>
                 <option value="dark">Dark</option>
               </select>
+            </li>
+            <li>
               <select id="lang">
                 <option value="en">English</option>
                 <option value="se">Svenska</option>
               </select>
+            </li>
+            <li>
+              <button id="print" onclick="window.print()">Print / Save PDF</button>
             </li>
           </ul>
         </nav>

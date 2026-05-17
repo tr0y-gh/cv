@@ -29,8 +29,20 @@
 @page {
   margin: none;
   size: A4;
+  background: var(--bg-0);
+}
+@page :first {
+}
+.print {
+  display: none;
 }
 @media print {
+  .print {
+    display: initial;
+  }
+  .no-print {
+    display: none;
+  }
   .break-avoid {
     page-break-inside: avoid;
   }
@@ -106,8 +118,25 @@ body {
 
 /* Layout */
 .flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
 .flex-1 { flex: 1; }
 .flex-0 { flex: 0; }
+.
+.md-25, .md-50,
+.lg-25, .lg-50 {
+  width: 100%;
+}
+@media all and (min-width: 400px) {
+  .md-25 { width: 25%; }
+  .md-50 { width: 50%; }
+  .md-flex { display: flex; }
+  .md-flex-1 { flex: 1; }
+}
+@media all and (min-width: 600px) {
+  .lg-25 { width: 25%; }
+  .lg-50 { width: 50%; }
+  .lg-flex-1 { flex: 1; }
+}
 
 .container {
   max-width: var(--max-width);
@@ -115,6 +144,9 @@ body {
   padding: var(--spacing-md);
 }
 
+#print-header {
+  .container { padding-top: 0; padding-bottom: 0; }
+}
 #page-header, #page-footer {
   &, select {
     font-family: var(--font-mono);
@@ -127,18 +159,18 @@ body {
   }
 }
 #page-header {
-  ul li:not(:first-child) { margin-left: var(--spacing-md); }
+  ul li:not(:first-child) { margin-left: var(--spacing-xs); }
 }
 #page-footer {
-  ul li:not(:first-child) { margin-top: var(--spacing-sm); }
+  ul li:not(:first-child) { margin-top: var(--spacing-xs); }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-mono);
-  .subheading {
-    font-size: .75em;
-    color: var(--fg-2);
-  }
+}
+.subheading {
+  font-size: .875em;
+  color: var(--fg-2);
 }
 
 p {
@@ -167,4 +199,12 @@ input, select, button {
   border: 1px solid var(--bg-1);
   background: var(--bg-2);
   color: var(--fg-1);
+}
+
+
+.skills {
+  ul {
+    margin-bottom: var(--spacing-md);
+    li { font-size: .875rem; }
+  }
 }

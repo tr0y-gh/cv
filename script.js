@@ -16,6 +16,7 @@ function updateLanguage (e) {
   $.all('#theme option').forEach(el => {
     el.textContent = t[el.value][t.lang]
   })
+  $.one('#print').textContent = t.print[t.lang]
 
   router.render()
 }
@@ -48,6 +49,10 @@ function init () {
   theme = window.localStorage.getItem('theme') || theme
   updateTheme(theme)
   $.one('#theme').onchange = e => updateTheme(e.target.value)
+
+  // print
+  $.one('#print').textContent = t.print[t.lang]
+  $.one('#print-header p').innerHTML = t.printHeader[t.lang]
 
   // router
   const links = $.all('a[href]')

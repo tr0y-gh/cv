@@ -105,6 +105,11 @@ export default {
   },
   dark: { en: 'Dark', se: 'Mörkt' },
   light: { en: 'Light', se: 'Ljust' },
+  print: { en: 'Print / Save PDF', se: 'Skriv ut / Spara PDF' },
+  printHeader: {
+    en: 'Click <a href="">here</a> for a printer friendly PDF.',
+    se: 'Klicka <a href="">här</a> för en skrivarvänlig PDF.',
+  },
   Home: {
     title: { en: 'CV', se: 'CV' },
     about: {
