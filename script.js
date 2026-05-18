@@ -1,5 +1,5 @@
 import t from './src/i18n.js'
-import { $ } from './src/utils.js'
+import { $, format } from './src/utils.js'
 import router from './src/router.js'
 
 function updateLanguage (e) {
@@ -18,6 +18,11 @@ function updateLanguage (e) {
   })
   $.one('#print').textContent = t.print[t.lang]
 
+  const info = JSON.parse(window.localStorage.getItem('info'))
+  const query = Object.entries(info).map(i => `${i[0]}=${i[1]}`).join('&')
+  const url = `https://cv.tr0y.co?${query}`
+  $.one('#print-header p').innerHTML = format(t.printHeader[t.lang], url)
+
   router.render()
 }
 
@@ -27,9 +32,23 @@ function updateTheme (theme) {
   window.localStorage.setItem('theme', theme)
 }
 
-
 function init () {
   router.redirect() // redirect from 404.html
+
+  // query params
+  const search = decodeURIComponent(window.location.search)
+  const params = search.replace('?', '').split('&').filter(i => i)
+  let info = {}
+  for (let param of params) {
+    const [key, value] = param.split('=')
+    info[key] = value
+  }
+  // Store query params
+  if (Object.keys(info).length) {
+    window.localStorage.setItem('info', JSON.stringify(info))
+  }
+  // Clean up
+  window.history.replaceState({}, null, '/')
 
   // i18n
   const lang = window.localStorage.getItem('lang') || t.lang
@@ -52,7 +71,11 @@ function init () {
 
   // print
   $.one('#print').textContent = t.print[t.lang]
-  $.one('#print-header p').innerHTML = t.printHeader[t.lang]
+  // Empty unless query has been parsed and saved
+  info = JSON.parse(window.localStorage.getItem('info') || '{}')
+  const query = Object.entries(info).map(i => `${i[0]}=${i[1]}`).join('&')
+  const url = `https://cv.tr0y.co?${query}`
+  $.one('#print-header p').innerHTML = format(t.printHeader[t.lang], url)
 
   // router
   const links = $.all('a[href]')

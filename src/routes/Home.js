@@ -17,7 +17,17 @@ function Experience () {
 export default {
   name: 'Home',
   render () {
+    const info = JSON.parse(window.localStorage.getItem('info')) || {}
     return `
+      <div class="profile">
+        <h1>${info['name'] || 'REDACTED'}, <span class="subheading">${t.Home.about.fullstackDeveloper[t.lang]}</span></h1>
+        <ul class="unstyled">
+          <li>${info['email'] || 'REDACTED'}</li>
+          <li>${info['phone'] || 'REDACTED'}</li>
+          <li>${info['git'] || 'REDACTED'}</li>
+          <li>${info['npm'] || 'REDACTED'}</li>
+        </ul>
+      </div>
       <div class="about">
         <h2>${t.Home.about.title[t.lang]}</h2>
         ${t.Home.about.content[t.lang].map(p => `<p>${p}</p>`).join('')}
@@ -26,7 +36,7 @@ export default {
         <h2>${t.Home.skills.title[t.lang]}</h2>
         <div class="md-flex flex-wrap">
           <ul class="unstyled md-50 lg-25">
-            <li class="subheading">Languages</li>
+            <li class="subheading">${t.Home.skills.languages[t.lang]}</li>
             <li>TypeScript / JavaScript</li>
             <li>Python</li>
             <li>Bash / Shell</li>

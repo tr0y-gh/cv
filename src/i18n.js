@@ -107,13 +107,14 @@ export default {
   light: { en: 'Light', se: 'Ljust' },
   print: { en: 'Print / Save PDF', se: 'Skriv ut / Spara PDF' },
   printHeader: {
-    en: 'Click <a href="">here</a> for a printer friendly PDF.',
-    se: 'Klicka <a href="">här</a> för en skrivarvänlig PDF.',
+    en: 'Click <a href="%s">here</a> for a printer friendly PDF.',
+    se: 'Klicka <a href="%s">här</a> för en skrivarvänlig PDF.',
   },
   Home: {
     title: { en: 'CV', se: 'CV' },
     about: {
       title: { en: 'About me', se: 'Om mig' },
+      fullstackDeveloper: { en: 'Full Stack Developer', se: 'Full Stack Utvecklare' },
       content: {
         en: [
           "My name is Troy and I'm a Full Stack Developer based in Stockholm, Sweden. I started programming 20 years ago and I've worked in the business for 10.",
@@ -131,6 +132,7 @@ export default {
     },
     skills: {
       title: { en: 'Skills', se: 'Kunskaper' },
+      languages: { en: 'Languages', se: 'Språk' },
     },
     experience,
   }, 
