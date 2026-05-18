@@ -18,7 +18,7 @@ function updateLanguage (e) {
   })
   $.one('#print').textContent = t.print[t.lang]
 
-  const info = JSON.parse(window.localStorage.getItem('info'))
+  const info = JSON.parse(window.localStorage.getItem('info') || '{}')
   const query = Object.entries(info).map(i => `${i[0]}=${i[1]}`).join('&')
   const url = `https://cv.tr0y.co?${query}`
   $.one('#print-header p').innerHTML = format(t.printHeader[t.lang], url)
