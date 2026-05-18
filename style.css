@@ -192,16 +192,18 @@ code, pre {
 code { padding: 0 .25em; }
 pre { padding: var(--spacing-sm); }
 
-/* TODO: Align heights */
 input, select, button {
   z-index: 1;
   &:focus { z-index: 10; }
-  padding: var(--spacing-xs) var(--spacing-sm);
+  padding: .25rem;
+  margin: 0;
+  height: 1.5rem;
   border: 1px solid var(--bg-1);
+  font-size: .75rem;
+  line-height: 1;
   background: var(--bg-2);
   color: var(--fg-1);
 }
-
 
 .profile {
   h1 { margin-top: 0; }
