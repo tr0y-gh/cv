@@ -207,6 +207,15 @@ input, select, button {
 
 .profile {
   h1 { margin-top: 0; }
+  ul li { align-items: center; margin-bottom: var(--spacing-xs); }
+  ul li .icon { margin-right: var(--spacing-sm); }
+  ul a { text-decoration: none; }
+}
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  fill: var(--fg-0);
+  vertical-align: -0.125em;
 }
 .skills {
   ul {
