@@ -192,6 +192,7 @@ code, pre {
 code { padding: 0 .25em; }
 pre { padding: var(--spacing-sm); }
 
+/* TODO: Align heights */
 input, select, button {
   z-index: 1;
   &:focus { z-index: 10; }
@@ -209,5 +210,17 @@ input, select, button {
   ul {
     margin-bottom: var(--spacing-md);
     li { font-size: .875rem; }
+  }
+}
+.experience {
+  .stack {
+    li {
+      &:not(:last-child) { margin-right: var(--spacing-xs); }
+      margin-bottom: var(--spacing-xs);
+      padding: .125rem .25rem;
+      font-size: .75rem;
+      color: var(--bg-0);
+      background: var(--fg-0);
+    }
   }
 }

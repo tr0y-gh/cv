@@ -2,12 +2,13 @@ import t from '../i18n.js'
 
 function Experience () {
   return t.Home.experience.content.map(item => {
-    const { company, year, position, content } = item
+    const { company, year, position, content, stack } = item
     return `
       <section class="break-avoid">
         <h3><span class="subheading">${year}</span> ${company}, <span class="subheading">${position[t.lang]}</span></h3>
         <div>
           ${content[t.lang].map(p => `<p>${p}</p>`).join('')}
+          <ul class="stack unstyled flex flex-wrap">${stack.map(li => `<li>${li}</li>`).join('')}</ul>
         </div>
       </section>
     `

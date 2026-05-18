@@ -17,7 +17,7 @@ const experience = {
           'Eftersom vi hanterade patientdata behövde jag sätta mig in i lagar och datasäkerhet på ett sätt jag inte hade innan.',
         ],
       },
-      stack: [],
+      stack: ['Podman', 'Node.js', 'TypeScript', 'Python', 'Svelte', 'PostgreSQL', 'SQLite'],
     },
     {
       company: 'Klimato',
@@ -33,7 +33,7 @@ const experience = {
           'Jag implementerade containers, CI/CD flöde med GitHub Actions och flyttade rättigheter från utvecklarnas maskiner till CI/CD flödet.',
         ],
       },
-      stack: [],
+      stack: ['Podman', 'Node.js', 'Vue.js', 'React Native', 'MongoDB', 'PostgreSQL', 'SQLite', 'Redis'],
     },
     {
       company: 'Silicon Wizard',
@@ -47,7 +47,7 @@ const experience = {
           'Silicon Wizard är mitt konsultbolag som jag har använt för att fakturera för uppdrag och som moderbolag för mina startup försök.',
         ],
       },
-      stack: [],
+      stack: ['Podman', 'Node.js', 'TypeScript', 'Python', 'Vue.js', 'Svelte', 'PostgreSQL', 'SQLite'],
     },
     {
       company: 'Enklare',
@@ -61,7 +61,7 @@ const experience = {
           'Enklare är ett fin-tech bolag som erbjuder prisjämförelser för lån, försäkring och el. Där implementerade BankID integrationen och migrerade utvecklingsmiljöerna till containers. Jag ansvarade även för alla frontends.',
         ],
       },
-      stack: [],
+      stack: ['Docker', 'Node.js', 'Laravel', 'Wordpress', 'Vue.js', 'Redis', 'BankID'],
     },
     {
       company: 'Ispy',
@@ -75,7 +75,7 @@ const experience = {
           'Ispy är en konsult-/webbyrå med många olika kunder inom flera branscher. Vi jobbade i många projekt och miljöer från underhåll av gammal PHP till mer moderna Node.js och React. Ett av de mer spännande var en crowdfunding plattform för välgörenhetsproject.',
         ],
       },
-      stack: [],
+      stack: ['Docker', 'Node.js', 'React', 'Vue.js', 'Wordpress', 'Electron', 'MySQL', 'MongoDB', 'Redis'],
     },
     {
       company: 'Znaptag',
@@ -91,7 +91,7 @@ const experience = {
           'En lösning jag fortfarande är väldigt stolt över var att använda adblocks blocklistor för att filtrera annonser när vi skrapade bilder. Ironin att ett annonsföretag använder adblock går inte att missa.',
         ],
       },
-      stack: [],
+      stack: ['Node.js', 'Python', 'React', 'Vue.js', 'Redis'],
     },
   ]
 }
