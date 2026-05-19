@@ -3,7 +3,7 @@ const experience = {
   content: [
     {
       company: 'NoMoonShot',
-      year: 2021,
+      year: 2022,
       position: { en: 'Co-founder & CTO', se: 'Medgrundare & CTO' },
       content: {
         en: [

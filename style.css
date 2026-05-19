@@ -210,12 +210,27 @@ input, select, button {
   ul li { align-items: center; margin-bottom: var(--spacing-xs); }
   ul li .icon { margin-right: var(--spacing-sm); }
   ul a { text-decoration: none; }
+  img { width: 100%; max-width: 400px; margin-bottom: var(--spacing-md); }
+}
+@media (min-width: 400px) {
+  .profile .info {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    img { width: 200px; margin-bottom: 0; }
+  }
+
 }
 .icon {
-  width: 1.5em;
-  height: 1.5em;
   fill: var(--fg-0);
-  vertical-align: -0.125em;
+  &.material {
+    width: 1.125em;
+    height: 1.125em;
+  }
+  &.fa {
+    width: 1.5em;
+    height: 1.5em;
+  }
 }
 .skills {
   ul {
