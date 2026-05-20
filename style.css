@@ -217,7 +217,7 @@ input, select, button {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    img { width: 200px; margin-bottom: 0; }
+    img { width: 150px; margin-bottom: 0; }
   }
 
 }
@@ -226,6 +226,7 @@ input, select, button {
   &.material {
     width: 1.125em;
     height: 1.125em;
+    margin-left: .25rem;
   }
   &.fa {
     width: 1.5em;
@@ -239,6 +240,7 @@ input, select, button {
   }
 }
 .experience {
+  break-before: page;
   .stack {
     li {
       &:not(:last-child) { margin-right: var(--spacing-xs); }

@@ -21,7 +21,7 @@ export default {
     const info = JSON.parse(window.localStorage.getItem('info')) || {}
     return `
       <div class="profile">
-        <h1>${info['name'] || 'Troy'}, <span class="subheading">${t.Home.about.fullstackDeveloper[t.lang]}</span></h1>
+        <h1>${info['name'] || 'Troy ****'}, <span class="subheading">${t.Home.about.fullstackDeveloper[t.lang]}</span></h1>
         <div class="info">
           <image src="./src/assets/headshot.jpg" />
           <ul class="unstyled flex-1">
